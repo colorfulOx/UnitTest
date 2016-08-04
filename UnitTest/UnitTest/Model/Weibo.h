@@ -14,4 +14,6 @@
 
 @property (nonatomic, copy) NSString * name;
 
++ (instancetype)weiboWithDict:(NSDictionary *)dict;
+
 @end

@@ -10,4 +10,20 @@
 
 @implementation Weibo
 
++ (instancetype)weiboWithDict:(NSDictionary *)dict {
+    Weibo * obj = [[self alloc] init];
+    
+    [obj setValuesForKeysWithDictionary:dict];
+    
+    if (obj.age <= 0 || obj.age >= 130) {
+        obj.age = 0;
+    }
+    
+    return obj;
+}
+
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
+    
+}
+
 @end
